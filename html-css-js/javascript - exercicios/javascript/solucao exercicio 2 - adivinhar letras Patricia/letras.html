@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>      
+        <title>Exercício 04</title>
+        <meta charset="utf-8">
+    </head>
+	<body>
+        <p> Estou pensando em uma letra. Adivinhe qual é? </p>
+        <p> A, B, C, D ou E? </p>
+
+	    <!--Esse input é uma tag do html / placeholder tbm do html (quando o mouse mostra a descrição do que contém no botão / pequena dica, frase ou ação )
+        / id é uma identificação-->
+        <input type="text" placeholder="Digite a letra" id="letra"> 
+	<!--Esse button tbm é do html (é um botão) / on click é quando eu clico no botão	-->
+	<button onclick="adivinheletra();">Resultado</button>
+
+	<p id="resultado"></p>
+
+<!--Se eu quiser criar um js separado, eu acrescento no head o link que chama o meu Java Script, coloco o nome da função que eu criei-->
+
+	<script>
+	function adivinheletra() {
+		var letra = document.getElementById("letra").value;
+		var mensagem;
+        if (letra == "C"){
+            mensagem = "Você acertou";
+        }  
+        else if (letra == "B" || letra == "D"){
+            mensagem = "hummm,era quase essa";
+        } else {
+           mensagem = "xi, não chegou nem perto";
+        }
+document.getElementById("resultado").innerHTML = mensagem;
+	}
+	</script>
+
+</body>
+</html>
+
+<!--|| SHIFT + O BOTAO QUE TEM (: E BARRA \) -->
+
+    Contact GitHub API Training Shop Blog About 
+
+    © 2016 GitHub, Inc. Terms Privacy Security Status Help 
+

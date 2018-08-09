@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+	<form>
+		<input type="text" placeholder="Nome" id="nome">
+		<input type="text" placeholder="Sobrenome" id="sobrenome">
+
+	</form>
+
+	<button onclick="getNome()">Enviar</button>
+
+	<p id="resultado"></p>
+
+	<script>
+	function getNome(nome, sobrenome) {
+		var nome = document.getElementById('nome').value;
+		var sobrenome = document.getElementById('sobrenome').value;
+
+		document.getElementById("resultado").innerHTML = nome  +  sobrenome;
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+	<body>
+	<p id="paragrafo">Um parágrafo qualquer.</p>
+
+	<button onclick="mostraTexto()">Clique para mostrar o conteúdo do paragráfo</button>
+
+	<p id="resultado"></p>
+
+	<script>
+	function mostraTexto() {
+	    var conteudo = document.getElementById("paragrafo").innerHTML;
+	    document.getElementById("resultado").innerHTML = conteudo;
+	}
+	</script>
+
+	</body>
+</html>

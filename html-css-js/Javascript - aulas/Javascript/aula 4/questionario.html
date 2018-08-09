@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+
+	<p>Estou pensando em uma letra. Adivinhe qual é: a, b, c, d ou e?</p>
+
+	<input type="text" id="digiteLetra">
+	<button onclick="adivinheALetra();">Tente adivinhar!</button>
+
+	<p id="resultado"></p>
+
+	<script>
+		function adivinheALetra () {
+			var letra = document.getElementById("digiteLetra").value;
+			var mensagem;
+
+
+			if (letra == "c") {
+				mensagem = "Você acertou! Como você sabia?";
+			} else if (letra == "b" || letra == "d") {
+				mensagem = "Hmmm, era quase essa...";
+			} else {
+				mensagem = "Xii, nem perto...";
+			};
+
+			document.getElementById("resultado").innerHTML = mensagem;
+
+		};
+
+	</script>
+
+</body>
+</html>
+
+
+
+<!--!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+	<p>Estou pensando em uma letra. Adivinhe qual é: a, b, c, d ou e?</p>
+
+	<input id="digitaLetra" type="text">
+
+	<button onclick="adivinheALetra()">Tente adivinhar!</button>
+
+	<p id="resultado"></p>
+
+	<script>
+	function adivinheALetra() {
+
+	    var letra = document.getElementById("digitaLetra").value;
+	    var mensagem;
+
+	    if (letra == "c") {
+	        mensagem = "Você acertou! Como você sabia?";
+
+	    } else if (letra == "b" || letra == "d") {
+	        mensagem = "Hmmm, era quase essa…";
+
+	    } else {
+	        mensagem = "Xii, nem perto...";
+	    }
+
+		document.getElementById("resultado").innerHTML = mensagem;
+	}
+
+	</script>
+
+	</body>
+</html-->
+
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      tr::odd td {
+        background-color: #FF00FF;
+      }
+
+      img {
+        width: 100px;
+      }
+
+      #catalogo {
+        border: 1px solid rebeccapurple;
+      }
+
+      #mensagens {
+        color: red;
+        font-weight: bold;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loja do Pablo</h1>
+    <table id='catalogo'>
+      <th>
+        <td>Nome do artista</td>
+        <td>Valor</td>
+        <td>Ano</td>
+        <td>Capa</td>
+      </th>
+      <tr>
+        <td>Pablo do Arrocha</td>
+        <td>R$ 15,00</td>
+        <td>2014</td>
+        <td><img src="https://1.bp.blogspot.com/-_lmJCWPe6Cc/VCNML-smqDI/AAAAAAAAAHE/WWkmy6uSGMA/s1600/Capa%2BCD%2BPablo%2B-%2B%C3%89%2BS%C3%B3%2BDizer%2BQue%2BSim.png" alt="Pablo, romântico"></td>
+      </tr>
+      <tr>
+        <td>Pablo do Arrocha</td>
+        <td>R$ 15,00</td>
+        <td>2014</td>
+        <td><img src="https://1.bp.blogspot.com/-_lmJCWPe6Cc/VCNML-smqDI/AAAAAAAAAHE/WWkmy6uSGMA/s1600/Capa%2BCD%2BPablo%2B-%2B%C3%89%2BS%C3%B3%2BDizer%2BQue%2BSim.png" alt="Pablo, romântico"></td>
+      </tr>
+      <tr>
+        <td>Pablo do Arrocha</td>
+        <td>R$ 15,00</td>
+        <td>2014</td>
+        <td><img src="https://1.bp.blogspot.com/-_lmJCWPe6Cc/VCNML-smqDI/AAAAAAAAAHE/WWkmy6uSGMA/s1600/Capa%2BCD%2BPablo%2B-%2B%C3%89%2BS%C3%B3%2BDizer%2BQue%2BSim.png" alt="Pablo, romântico"></td>
+      </tr>
+      <tr>
+        <td>Pablo do Arrocha</td>
+        <td>R$ 15,00</td>
+        <td>2014</td>
+        <td><img src="https://1.bp.blogspot.com/-_lmJCWPe6Cc/VCNML-smqDI/AAAAAAAAAHE/WWkmy6uSGMA/s1600/Capa%2BCD%2BPablo%2B-%2B%C3%89%2BS%C3%B3%2BDizer%2BQue%2BSim.png" alt="Pablo, romântico"></td>
+      </tr>
+    </table>
+    <form action="">
+      <div>
+        <label for="nome-do-vinil">Nome do vinil</label>
+        <br />
+        <input id="nome-do-vinil" type="text" />
+      </div>
+      <p id='mensagens'>
+      </p>
+      <div>
+        <label for="forma-pagamento">Forma de pagamento</label>
+        <br />
+        <select name="" id="forma-pagamento">
+          <option value="dindin">Dinheiro</option>
+          <option value="cc">Cartão de Crédito</option>
+          <option value="cd">Cartão de Débito</option>
+        </select>
+      </div>
+      <div>
+        <label for="cidade">Cidade de envio</label>
+        <br />
+        <select name="" id="cidade">
+          <option value="sp">São Paulo</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="belem">Belem</option>
+          <option value="ssa">Salvador</option>
+          <option value="poa">Porto Alegre</option>
+        </select>
+      </div>
+      <div id="msg-frete">
+      </div>
+      <br><br>
+      <button id="botao">Enviar pedido</button>
+    </form>
+
+    <script>
+        var formaPagamento = document.querySelector('#forma-pagamento');
+        var mensagens = document.querySelector('#mensagens');
+        var botao = document.querySelector('#botao');
+        var cidade = document.querySelector('#cidade');
+        var msgFrete = document.querySelector('#msg-frete');
+
+        cidade.addEventListener('change', function(){
+          if(cidade.value == 'sp' || cidade.value == 'rj') {
+            msgFrete.innerHTML = 'Valor do frete R$10,00';
+          } else {
+            msgFrete.innerHTML = 'Não entregamos na sua cidade';
+          }
+        });
+
+        formaPagamento.addEventListener('change', function(){
+            if(formaPagamento.value == 'cc' || formaPagamento.value == '') {
+              mensagens.innerHTML = 'Só aceitamos visa e master';
+            } else {
+              mensagens.innerHTML = "";
+            }
+        });
+
+        botao.addEventListener('click', function() {
+          alert('Clicaram no botão');
+        });
+    </script>
+  </body>
+</html>

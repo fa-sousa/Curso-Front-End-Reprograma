@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+	<ul id="listaDeBebidas">
+	  <li>café</li>
+	  <li>chá</li>
+	  <li>suco de laranja</li>
+	</ul>
+
+	<button onclick="myFunction()">Clique aqui</button>
+
+	<p id="resultado"></p>
+
+	<script>
+	function myFunction() {
+	    var conteudo = document.getElementById("listaDeBebidas").innerHTML;
+	    document.getElementById("resultado").innerHTML = conteudo;
+	}
+	</script>
+
+</body>
+</html>
+

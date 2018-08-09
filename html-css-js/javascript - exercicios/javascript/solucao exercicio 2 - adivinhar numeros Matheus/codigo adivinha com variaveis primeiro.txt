@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+       var numeropensado = 7;
+       var numeroadivinhado;
+       var t;
+
+       for(t = 5;t > 0; t--)   {
+        numeroadivinhado = prompt ('Adivinhe um número de 0 a 10. Você tem '+ t + 'tentativas');
+        if (numeroadivinhado == numeropensado) {
+           alert ('Aeeeee !!!! Acertou !!!!');
+           break;
+        } 
+        if(t==1){
+            alert ('GAME OVER !!!!')
+        }   
+
+       }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
