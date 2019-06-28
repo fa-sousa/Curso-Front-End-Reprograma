@@ -54,6 +54,8 @@ li {
 .logo {
     float: left;
     width: 136px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 header {
     background-color: rgba(3,148,118);
@@ -61,4 +63,10 @@ header {
 }
 nav {
     float: right; 
+    margin-top: 20px;
+    margin-right: 30px;
+}
+nav a {
+    margin-left: 10px;
+    color: white;
 }
